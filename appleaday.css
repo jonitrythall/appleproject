@@ -1,0 +1,265 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Header things */
+header {
+  text-align: center;
+  background: #b3e5d4;
+  border-bottom: 7px solid #ef9d8b;
+}
+
+.main-pic {
+  padding: 15px 0;
+  width: 200px;
+}
+
+.main-pic-full {
+  display: none;
+  width: 400px;
+}
+
+/* Apple animation assignments */
+.cheeks {
+  -webkit-animation: blush 10s infinite;
+  animation: blush 10s infinite;
+}
+
+.lids {
+  -webkit-transform: translateY(-18px);
+  transform: translateY(-18px);
+  -webkit-animation: blink 4s infinite;
+  animation: blink 4s infinite;
+}
+
+.lids .lids-2 {
+  transform: translateY(-21px);
+  -webkit-transform: translateY(-21px);
+  -webkit-animation: blink-2 4s infinite;
+  animation: blink-2 4s infinite;
+}
+
+/* main content */
+.apple-cal {
+  display: none;
+}
+
+.the-good-stuff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 700px;
+}
+
+.contain-exercise {
+  margin: 25px;
+  text-align: center;
+}
+
+.exercise-title {
+  color: #72483f;
+  font-family: 'Dosis', sans-serif;
+  font-size: 28px;
+}
+
+.exercise-preview {
+  border-radius: 4px;
+}
+
+.exercise-description {
+  margin: 10px auto;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #333333;
+  max-width: 280px;
+}
+
+/* Footer business */
+footer {
+  overflow: hidden;
+  background: #d7f2e9;
+  text-align: center;
+  width: 100%;
+}
+
+.contact {
+  display: block;
+}
+
+footer .fa {
+  color: #ed6e46;
+  font-size: 50px;
+  -webkit-transition: color 600ms linear;
+}
+
+footer .fa:hover {
+  color: #ef9d8b;
+  -webkit-transform: scale(1.2);
+}
+
+footer .fa:first-of-type {
+  margin: 0 50px;
+  padding-bottom: 20px;
+}
+
+.by-img {
+  padding: 30px 0;
+  width: 250px;
+}
+
+/* Animations */
+@-webkit-keyframes blink {
+  10% {
+    -webkit-transform: translateY(-18px);
+  }
+  20% {
+    -webkit-transform: translateY(-18px);
+  }
+  46% {
+    -webkit-transform: translateY(-18px);
+  }
+  50% {
+    -webkit-transform: translateY(-2px);
+  }
+  54% {
+    -webkit-transform: translateY(-18px);
+  }
+  70% {
+    transform: translateY(-21px);
+  }
+  90% {
+    -webkit-transform: translateY(-18px);
+  }
+}
+
+@keyframes blink {
+  10% {
+    transform: translateY(-18px);
+  }
+  20% {
+    transform: translateY(-18px);
+  }
+  46% {
+    transform: translateY(-18px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  54% {
+    transform: translateY(-18px);
+  }
+  70% {
+    transform: translateY(-21px);
+  }
+  90% {
+    transform: translateY(-18px);
+  }
+}
+
+@-webkit-keyframes blink-2 {
+  10% {
+    -webit-transform: translateY(-21px);
+  }
+  20% {
+    -webkit-transform: translateY(-21px);
+  }
+  46% {
+    -webkit-transform: translateY(-21px);
+  }
+  50% {
+    -webkit-transform: translateY(-2px);
+  }
+  54% {
+    -webkit-transform: translateY(-21px);
+  }
+  70% {
+    transform: translateY(-21px);
+  }
+  90% {
+    -webkit-transform: translateY(-21px);
+  }
+}
+
+@keyframes blink-2 {
+  10% {
+    transform: translateY(-21px);
+  }
+  20% {
+    transform: translateY(-21px);
+  }
+  46% {
+    transform: translateY(-21px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  54% {
+    transform: translateY(-21px);
+  }
+  70% {
+    transform: translateY(-21px);
+  }
+  90% {
+    transform: translateY(-21px);
+  }
+}
+
+@-webkit-keyframes blush {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blush {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Begin Media Queries */
+@media (min-width: 900px) {
+  .main-pic {
+    display: none;
+  } 
+  .main-pic-full {
+    display: block;
+    margin: auto;
+    padding: 15px 0;
+  }
+  .apple-cal {
+    display: block;
+    position: absolute;
+    right: 85px;
+    opacity: .2;
+    z-index: -1;
+    transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    width: 500px;
+  }
+  .exercise-preview {
+    margin-left: 0;
+  }
+  .contain-footer {
+    margin: auto;
+    width: 600px;
+  }
+  .contact {
+    float: right;
+    padding-top: 30px;
+  }
+  .by {
+    float: left;
+  }
+  footer .fa:first-of-type {
+    margin-right: 3px;
+  }
+}
+
+/* trying to fix a weird iphone 5 issue w/ horizontal scrolling?*/
+@media (max-width: 350px) {
+  .exercise-preview {
+    margin-left: -15px;
+  }
+}
